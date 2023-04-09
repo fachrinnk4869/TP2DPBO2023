@@ -34,7 +34,7 @@ Desain yang saya buat menggunakan 8 Class Utama:
 * FrameArtisFilm
 
 ## Design Class Diagram
-![Screenshot 2023-04-09 231831](https://user-images.githubusercontent.com/92314386/230784265-ef12f477-a2e4-4326-b0a7-f01f30d51b17.png)
+![image](https://user-images.githubusercontent.com/92314386/230791982-bd24cca9-8c45-41b4-bd74-71c24fba0de7.png)
 
 `Login` --> terdiri dari komponen-komponen GUI seperti label, teks field, dan tombol yang digunakan untuk memvalidasi login pengguna dengan mengambil data username dan password dari teks field, kemudian melakukan query ke database dengan menggunakan kelas dbConnection. Jika data yang diinputkan sesuai dengan data yang terdapat di database, maka pengguna akan diarahkan ke FrameMenu. Namun, jika data tidak sesuai atau terjadi kesalahan saat melakukan query ke database, maka akan muncul pesan kesalahan dan teks field akan di-reset.
 
@@ -76,24 +76,73 @@ password: **fachri**
 ## Design GUI
 **Login Form**
 
+![image](https://user-images.githubusercontent.com/92314386/230792009-645eb703-a37f-4779-97c0-0821e2823d6e.png)
+
 **Frame Menu Film**
 
-**Frame Main Artis**
+![image](https://user-images.githubusercontent.com/92314386/230792042-88c7ed18-bd16-4bda-ad7d-c746f9bc3660.png)
+
+**Frame Menu Artis**
+
+![image](https://user-images.githubusercontent.com/92314386/230792047-87f050c2-3a9b-4bde-aafd-c4be50146831.png)
 
 **Frame Menambah Relasi**
 
-## Dokumentasi
+![image](https://user-images.githubusercontent.com/92314386/230792067-06d5ca87-689e-44dc-91f7-f25dd591d475.png)
 
+## Dokumentasi
 **Login**
+
+![image](https://user-images.githubusercontent.com/92314386/230792091-a3a62c12-bc36-4f31-bcdd-037025109208.png)
 
 **Add Data Film dan Artis**
 
+![image](https://user-images.githubusercontent.com/92314386/230792132-f1393d03-bebc-4f1a-b63d-f6510c57963c.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792193-0a73bd4f-38b6-4035-90a1-8ab8270966f4.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792153-42e0fac3-6b43-4522-88b4-8c3cfdcae165.png)
+
 **Update Data Film dan Artis**
+
+![image](https://user-images.githubusercontent.com/92314386/230792240-6e715ada-3783-449f-aa72-21b4c414f30e.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792268-a627065a-e09c-4af5-bcff-708032bdaab3.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792253-0ea1c399-5218-41b8-bcba-e81ba4f82986.png)
 
 **Confirm delete Film dan Artis**
 
+![image](https://user-images.githubusercontent.com/92314386/230792285-f3f3b38a-5c36-4b71-92f2-c0cfc59f98fc.png)
+
 **Add Data Relasi**
+
+![image](https://user-images.githubusercontent.com/92314386/230792306-19b94f55-7fe6-4c60-92c1-daed6c0dc492.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792319-0497a082-85e0-40da-a297-5d2607e6ef55.png)
 
 **Update Data Relasi**
 
+![image](https://user-images.githubusercontent.com/92314386/230792345-d26eba1b-77fa-419a-9324-4cf59582a099.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792375-7bc02206-673e-473c-9549-8d3dfaeaae54.png)
+
 **Confirm delete Relasi**
+
+![image](https://user-images.githubusercontent.com/92314386/230792384-7510eaec-b5a6-49d2-ba4e-342ff590e284.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792398-6cddb6d7-0449-4dd5-8198-d83540ff1944.png)
+
+## Batasan Program
+Sebelum menghapus antara film atau artis dikarenakan digunakan restricted relasi jadinya harus menghapus semua relasi yang berhubungan dengan film atau artis yang ingin dihapus
+
+**Contoh ketika aku menghapus film dengan jumlah artis 1(punya satu relasi dengan artis) tidak bisa**
+
+![image](https://user-images.githubusercontent.com/92314386/230792637-a495d32d-2cc6-4c09-8fed-391da91fd794.png)
+
+**Contoh ketika aku menghapus film dengan jumlah artis 0(tidak punya dengan artis) bisa**
+
+![image](https://user-images.githubusercontent.com/92314386/230792692-a30d57dc-30a7-4888-89e9-59fa57040faf.png)
+
+![image](https://user-images.githubusercontent.com/92314386/230792710-f21d1478-44ee-4d04-b01d-a3c1405479c0.png)
+
