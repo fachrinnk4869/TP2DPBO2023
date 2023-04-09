@@ -23,28 +23,42 @@ File README berisi desain program, penjelasan alur, dan dokumentasi saat program
 Submit link repository pada form berikut: [Form Pengumpulan](https://forms.gle/rvb1hKxbQVuYNbhKA) 
 
 ## Desain Program
-Desain yang saya buat menggunakan 1 Class Utama:
-* Mahasiswa
-* Menu
+Desain yang saya buat menggunakan 8 Class Utama:
+* FrameMenu
+* FrameAddArtis
+* FrameAddFilm
+* MenuArtis
+* MenuFilm
+* Artis
+* Film
+* FrameArtisFilm
 
-`Class Mahasiswa` :
-* **NIM** -> NIM mahasiswa, `string`
-* **Nama** -> Nama mahasiswa, `string`
-* **Nilai** -> Nilai mahasiswa, `string`
-* **gender** -> Gender mahasiswa, `string`
 
-`Class Menu` :
-* **Set Tabel** -> Mengeset Tabel untuk ditampilkan, `void`
-* **Insert Data** -> Menambah data, `void`
-* **Update Data** -> mengubah data yang dipilih, `void`
-* **Delete Data** -> menghapus data yang dipilih, `void`
-* **Reset Form** -> Mereset Form, `void`
+Kode tersebut merupakan implementasi dari user interface (UI) untuk melakukan login ke suatu aplikasi. Dalam implementasinya, terdapat koneksi ke database dengan menggunakan class dbConnection untuk melakukan query terhadap tabel akun dengan username dan password yang diinputkan oleh pengguna.
 
-_Semua Class diatas dilengkapi dengan setter dan getternya_
+Pada method resetForm(), nilai dari komponen FieldUsername dan FieldPassword akan di-set kembali menjadi string kosong sehingga pada saat pengguna telah melakukan login atau keluar dari aplikasi, maka form login akan di-reset untuk menghindari username dan password sebelumnya tetap tersimpan.
+
+Method initComponents() digunakan untuk mengatur layout dari komponen-komponen yang ada pada form login, seperti label "Username", text field FieldUsername, label "Password", password field FieldPassword, dan button ButtonLogin.
+
+Ketika pengguna menekan button ButtonLogin, maka akan dipanggil method ButtonLoginActionPerformed() yang berisi proses validasi username dan password yang diinputkan oleh pengguna melalui method db.selectQuery(). Apabila hasil query terdapat pada database, maka akan muncul pesan selamat datang pada user dan pengguna akan diarahkan ke halaman utama (FrameMenu) dan form login akan di-close (dispose()). Jika tidak, maka akan muncul pesan kesalahan dan form login akan di-reset.
+
+Class FrameMenu memiliki beberapa objek seperti flag yang bertipe data String dan memiliki akses modifier private, name yang bertipe data String dan memiliki akses modifier private, serta isUpdated yang bertipe data boolean dan memiliki akses modifier private. Selain itu, class FrameMenu juga memiliki beberapa objek GUI seperti mainPanel yang bertipe data JPanel, ButtonArtis yang bertipe data JButton, ButtonFilm yang bertipe data JButton, ButtonAdd yang bertipe data JButton, dan ButtonRelasi yang bertipe data JButton.
+
+Dalam konstruktor class FrameMenu, terdapat method initComponents() yang men-generate komponen-komponen GUI pada frame tersebut seperti button dan panel. Selain itu, pada saat pembuatan objek dari FrameMenu pada konstruktor juga akan di-set name dan flag sesuai dengan parameter yang diterima oleh konstruktor. Selain itu, objek isUpdated di-set menjadi true.
+
+Method setPanelFilm() digunakan untuk menghapus semua komponen pada mainPanel dan menambahkan objek dari class MenuFilm pada mainPanel. Setelah itu, mainPanel di-revalidate dan di-repaint, serta flag di-set menjadi "film".
+
+Method setPanelArtis() hampir sama dengan setPanelFilm(), yaitu menghapus semua komponen pada mainPanel dan menambahkan objek dari class MenuArtis pada mainPanel. Setelah itu, mainPanel di-revalidate dan di-repaint, serta flag di-set menjadi "artis".
+
+Method onDataUpdated() digunakan untuk merefresh data pada frame ini. Jika flag adalah "film", maka akan memanggil method setPanelFilm(), jika tidak, maka akan memanggil method setPanelArtis().
+
+Selain itu, terdapat juga beberapa method setter dan getter untuk objek flag dan isUpdated. Dan pada method ButtonAddActionPerformed() terdapat kondisi dimana jika flag adalah "film", maka akan membuat objek dari class FrameAddFilm, jika tidak, maka akan membuat objek dari class FrameAddArtis.
+## Design Class Diagram
+
+## Entitas Relasional Diagram
 
 ## Design GUI
 ![JAR FILE](design.png)
-
 
 ## Alur Program Program GUI
 
