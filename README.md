@@ -32,7 +32,8 @@ Desain yang saya buat menggunakan 8 Class Utama:
 * Artis
 * Film
 * FrameArtisFilm
-
+## Design Class Diagram
+![Screenshot 2023-04-09 231831](https://user-images.githubusercontent.com/92314386/230784265-ef12f477-a2e4-4326-b0a7-f01f30d51b17.png)
 
 Kode tersebut merupakan implementasi dari user interface (UI) untuk melakukan login ke suatu aplikasi. Dalam implementasinya, terdapat koneksi ke database dengan menggunakan class dbConnection untuk melakukan query terhadap tabel akun dengan username dan password yang diinputkan oleh pengguna.
 
@@ -53,7 +54,7 @@ Method setPanelArtis() hampir sama dengan setPanelFilm(), yaitu menghapus semua 
 Method onDataUpdated() digunakan untuk merefresh data pada frame ini. Jika flag adalah "film", maka akan memanggil method setPanelFilm(), jika tidak, maka akan memanggil method setPanelArtis().
 
 Selain itu, terdapat juga beberapa method setter dan getter untuk objek flag dan isUpdated. Dan pada method ButtonAddActionPerformed() terdapat kondisi dimana jika flag adalah "film", maka akan membuat objek dari class FrameAddFilm, jika tidak, maka akan membuat objek dari class FrameAddArtis.
-## Design Class Diagram
+
 
 ## Entitas Relasional Diagram
 
