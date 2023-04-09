@@ -57,6 +57,7 @@ Selain itu, terdapat juga beberapa method setter dan getter untuk objek flag dan
 
 
 ## Entitas Relasional Diagram
+![image](https://user-images.githubusercontent.com/92314386/230784376-2824d317-7619-4fd6-a481-403d3f455272.png)
 
 ## Design GUI
 ![JAR FILE](design.png)
