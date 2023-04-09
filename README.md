@@ -44,28 +44,45 @@ berdasarkan pada ERD diatas tabel `film` berelasi secara many-to-many dengan `ar
 
 ## Alur Program Program GUI
 
-Text field untuk mengisi data login  untuk memilih gender mahasiswa
+- Text field untuk mengisi data login  untuk memilih gender mahasiswa
 
-Memilih data yang ingin ditampilkan dan CRUD pilih antara data `film` atau data `artis`
+- Memilih data yang ingin ditampilkan dan CRUD pilih antara data `film` atau data `artis`
 
-Menambah data dengan mengklik klik `add`
+- Menambah data dengan mengklik klik `add`
 
-Memilih data jika ada data yang ingin dirubah klik `update` dan rubah di text field nya
+- Menambah relasi antara `film` dan  `artis` dengan mengklik klik `X`
 
-Memilih data jika ada data yang ingin dihapus jika sudah maka klik `delete`
+- Memilih data jika ada data yang ingin dirubah klik `update` dan rubah di text field nya
 
-* untuk mencoba login dapat menggunakan akun berikut
+- Memilih data jika ada data yang ingin dihapus jika sudah maka klik `delete`
 
-username: mokha
+_Untuk mencoba login dapat menggunakan akun berikut:_
 
-password: mokha30
+username: **fachri**
+
+password: **fachri**
 
 ## Design GUI
+**Login Form**
+
+**Frame Menu Film**
+
+**Frame Main Artis**
+
+**Frame Menambah Relasi**
+
 ## Dokumentasi
-**Confirm Delete**
-![Screenshot 2023-03-17 091422](https://user-images.githubusercontent.com/92314386/225795247-c63588f5-dc34-4781-9fc3-ee32bde74b70.png)
 
-**Update Data**
+**Login**
 
-![image](https://user-images.githubusercontent.com/92314386/225795139-feaef12f-4d59-4941-a108-e91bc4f8921e.png)
+**Add Data Film dan Artis**
 
+**Update Data Film dan Artis**
+
+**Confirm delete Film dan Artis**
+
+**Add Data Relasi**
+
+**Update Data Relasi**
+
+**Confirm delete Relasi**
