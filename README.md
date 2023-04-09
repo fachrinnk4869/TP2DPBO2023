@@ -33,8 +33,6 @@ Desain yang saya buat menggunakan 8 Class Utama:
 * Film
 * FrameArtisFilm
 
-apa cik
-
 
 ## Design Class Diagram
 ![Screenshot 2023-04-09 231831](https://user-images.githubusercontent.com/92314386/230784265-ef12f477-a2e4-4326-b0a7-f01f30d51b17.png)
